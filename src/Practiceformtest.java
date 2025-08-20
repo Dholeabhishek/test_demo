@@ -13,7 +13,8 @@ public class Practiceformtest {
     @SuppressWarnings("deprecation")
 	public static void main(String[] args) {
         // Set the path to your WebDriver (Make sure you have the correct WebDriver)
-    	System.setProperty("org.openqa.selenium.chrome.ChromeDriver", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver","E:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+    	//System.setProperty("org.openqa.selenium.chrome.ChromeDriver", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
     	//System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
 
         // Initialize the WebDriver

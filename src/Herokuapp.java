@@ -9,8 +9,8 @@ public class Herokuapp {
 	{
 		// TODO Auto-generated method stub
 
-        System.setProperty("org.openqa.selenium.chrome.ChromeDriver ", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-
+        //System.setProperty("org.openqa.selenium.chrome.ChromeDriver ", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","E:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         //org.openqa.selenium.chrome.ChromeDriver ", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe
         // Create a new instance of ChromeDriver (opens the Chrome browser)
         WebDriver driver = new ChromeDriver();

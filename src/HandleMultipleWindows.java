@@ -10,7 +10,8 @@ import java.util.Set;
 public class HandleMultipleWindows {
 
 	public static void main(String[] args) throws InterruptedException {
-WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver","E:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
         
         // Implicit wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

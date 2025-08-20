@@ -22,20 +22,21 @@ public class testng {
     }
 
     @Test
-    public void searchTest() {
+    public void searchTest() throws InterruptedException {
         // Locate the search box and type a query
         WebElement searchBox = driver.findElement(By.name("q"));
-        searchBox.sendKeys("TestNG");
+        searchBox.sendKeys("selenium");
 
         // Submit the search form
         searchBox.submit();
 
         // Assert that the results page contains the search term "TestNG"
-        Assert.assertTrue(driver.getTitle().contains("TestNG"));
+        Assert.assertTrue(driver.getTitle().contains("selenium"));
+        Thread.sleep(3000);
     }
 
     @AfterClass
     public void tearDown() {
-        driver.quit();
+        //driver.quit();
     }
 }

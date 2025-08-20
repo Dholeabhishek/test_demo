@@ -17,10 +17,12 @@ public class d
     public static void main(String[] args) throws InterruptedException {
 
         // Initialize a new Chrome browser instance
-        WebDriver driver = new ChromeDriver();
-    
+        
+        System.setProperty("webdriver.chrome.driver","E:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         // Navigate to the specified URL
-            driver.get("https://testautomationpractice.blogspot.com/");
+        WebDriver driver = new ChromeDriver();
+        
+        driver.get("https://testautomationpractice.blogspot.com/");
 
         // Set an implicit wait timeout
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

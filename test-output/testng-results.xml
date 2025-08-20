@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-27T13:15:41 IST" name="Default suite" finished-at="2024-12-27T13:15:46 IST" duration-ms="4930">
+  <suite started-at="2025-02-26T14:35:34 IST" name="Default suite" finished-at="2025-02-26T14:35:48 IST" duration-ms="13848">
     <groups>
     </groups>
-    <test started-at="2024-12-27T13:15:41 IST" name="Default test" finished-at="2024-12-27T13:15:46 IST" duration-ms="4930">
-      <class name="testng2">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testng2@13e344d]" started-at="2024-12-27T13:15:41 IST" name="setup" finished-at="2024-12-27T13:15:45 IST" duration-ms="4394" status="PASS">
+    <test started-at="2025-02-26T14:35:34 IST" name="Default test" finished-at="2025-02-26T14:35:48 IST" duration-ms="13848">
+      <class name="egtestng">
+        <test-method is-config="true" signature="setup()[pri:0, instance:egtestng@33065d67]" started-at="2025-02-26T14:35:34 IST" name="setup" finished-at="2025-02-26T14:35:37 IST" duration-ms="2955" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="pageTitleTest()[pri:0, instance:testng2@13e344d]" started-at="2024-12-27T13:15:45 IST" name="pageTitleTest" finished-at="2024-12-27T13:15:45 IST" duration-ms="23" status="FAIL">
+        <test-method signature="verifyElementIsPresent()[pri:0, instance:egtestng@33065d67]" started-at="2025-02-26T14:35:37 IST" name="verifyElementIsPresent" finished-at="2025-02-26T14:35:37 IST" duration-ms="69" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyElementIsPresent -->
+        <test-method signature="verifyLinkRedirection()[pri:0, instance:egtestng@33065d67]" started-at="2025-02-26T14:35:37 IST" name="verifyLinkRedirection" finished-at="2025-02-26T14:35:47 IST" duration-ms="10581" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Page title does not match! expected [Expected Page Title] but found [Google]]]>
+              <![CDATA[URL redirection failed! expected [https://www.iana.org/domains/example] but found [https://www.iana.org/help/example-domains]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Page title does not match! expected [Expected Page Title] but found [Google]
+              <![CDATA[java.lang.AssertionError: URL redirection failed! expected [https://www.iana.org/domains/example] but found [https://www.iana.org/help/example-domains]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:629)
-at testng2.pageTitleTest(testng2.java:30)
+at egtestng.verifyLinkRedirection(egtestng.java:45)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -55,12 +59,57 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pageTitleTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testng2@13e344d]" started-at="2024-12-27T13:15:45 IST" name="tearDown" finished-at="2024-12-27T13:15:46 IST" duration-ms="467" status="PASS">
+        </test-method> <!-- verifyLinkRedirection -->
+        <test-method signature="verifyPageTitle()[pri:0, instance:egtestng@33065d67]" started-at="2025-02-26T14:35:47 IST" name="verifyPageTitle" finished-at="2025-02-26T14:35:47 IST" duration-ms="11" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Page title does not match! expected [Example Domain] but found [Example Domains]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Page title does not match! expected [Example Domain] but found [Example Domains]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at egtestng.verifyPageTitle(egtestng.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:egtestng@33065d67]" started-at="2025-02-26T14:35:47 IST" name="tearDown" finished-at="2025-02-26T14:35:48 IST" duration-ms="174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testng2 -->
+      </class> <!-- egtestng -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

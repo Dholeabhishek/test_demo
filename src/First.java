@@ -8,7 +8,8 @@ public class First {
     public static void main(String[] args) {  
         
     // declaration and instantiation of objects/variables  
-    System.setProperty("org.openqa.selenium.chrome.ChromeDriver ", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");  
+    	System.setProperty("webdriver.chrome.driver","E:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+    	//System.setProperty("org.openqa.selenium.chrome.ChromeDriver ", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");  
     WebDriver driver=new ChromeDriver();  
       
 // Launch website  

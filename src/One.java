@@ -10,7 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class One {
 public static void main(String[] args) {
-System.setProperty("org.openqa.selenium.chrome.ChromeDriver", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver","E:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+	//System.setProperty("org.openqa.selenium.chrome.ChromeDriver", "E:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 
 WebDriver driver=new ChromeDriver();
 driver.get("https://www.saucedemo.com/");

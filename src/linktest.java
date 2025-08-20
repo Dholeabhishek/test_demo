@@ -11,8 +11,8 @@ public class linktest
 public static void main(String[] args) 
 {
 //configure your browser
-
-System.setProperty("org.openqa.selenium.chrome.ChromeDriver ", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver","E:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+//System.setProperty("org.openqa.selenium.chrome.ChromeDriver ", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 //Instantiate for webdrivers
 
 WebDriver driver=new ChromeDriver();

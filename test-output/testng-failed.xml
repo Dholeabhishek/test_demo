@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testng2">
+      <class name="egtestng">
         <methods>
-          <include name="pageTitleTest"/>
-          <include name="setup"/>
+          <include name="verifyLinkRedirection"/>
           <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="verifyPageTitle"/>
         </methods>
-      </class> <!-- testng2 -->
+      </class> <!-- egtestng -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

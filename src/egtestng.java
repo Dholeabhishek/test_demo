@@ -13,7 +13,8 @@ public class egtestng {
 
     @BeforeClass
     public void setup() {
-    	System.setProperty("org.openqa.selenium.chrome.ChromeDriver", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+    	//System.setProperty("org.openqa.selenium.chrome.ChromeDriver", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver","E:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
     	//System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();

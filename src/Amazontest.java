@@ -15,9 +15,10 @@ public class Amazontest
 	{
 	
     //WebDriver driver;
-
-        System.setProperty("org.openqa.selenium.chrome.ChromeDriver", "D:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-        WebDriver driver=new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver","E:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+        //System.setProperty("org.openqa.selenium.chrome.ChromeDriver", "E:\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+        //E:\chromedriver-win64\chromedriver-win64
+        WebDriver driver=(WebDriver) new ChromeDriver();
         
         driver.manage().window().maximize();
         
